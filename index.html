@@ -1,0 +1,1786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Subrat Kumar Behera | Postdoctoral Fellow | IIT Bombay</title>
+  <meta name="description" content="Academic website of Dr. Subrat Kumar Behera - Postdoctoral Fellow at IIT Bombay. Research in Nonlinear Continuum Mechanics, Multiphysics of Soft Active Matter, PINNs, and Architected Metamaterials.">
+  <meta name="keywords" content="Subrat Kumar Behera, IIT Bombay, IIT Patna, University of Louisville, Continuum Mechanics, Smart Materials, Viscoelasticity, Chaos Control, PINNs">
+  <style>
+    :root {
+      --primary: #0f2744;
+      --primary-light: #1e3a8a;
+      --primary-dark: #0a192f;
+      --accent: #2563eb;
+      --accent-gold: #b45309;
+      --accent-badge: #d97706;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --border-color: #e2e8f0;
+      --border-focus: #3b82f6;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --font-heading: 'Merriweather', 'Georgia', 'Cambria', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    /* TOP NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-brand span {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      padding: 0.3rem 0;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .nav-btn {
+      background: var(--primary-light);
+      color: #ffffff !important;
+      padding: 0.45rem 1rem !important;
+      border-radius: 6px;
+      font-weight: 600 !important;
+      transition: background 0.2s ease !important;
+      border-bottom: none !important;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent) !important;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, #0a192f 0%, #0f2744 50%, #17375e 100%);
+      color: #ffffff;
+      padding: 4rem 1.5rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(0,0,0,0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-avatar-box {
+      text-align: center;
+    }
+
+    .hero-avatar {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      object-fit: cover;
+      background: #1e293b;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: #94a3b8;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      margin-top: 1rem;
+      background: rgba(37, 99, 235, 0.3);
+      border: 1px solid rgba(147, 197, 253, 0.4);
+      color: #93c5fd;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: #93c5fd;
+      margin-bottom: 1rem;
+      font-weight: 400;
+    }
+
+    .hero-affiliations {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-affiliations span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-bio {
+      color: #e2e8f0;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.8rem;
+      max-width: 800px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-1px);
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stats-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 1.8rem;
+      color: var(--primary-light);
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+      text-align: left;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* RESEARCH CARDS */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .research-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+    }
+
+    .research-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: #eff6ff;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .research-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .research-card p {
+      color: var(--text-main);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .research-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* PUBLICATIONS FILTER & CONTROLS */
+    .pub-controls {
+      background: var(--bg-card);
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      background: #e2e8f0;
+    }
+
+    .filter-btn.active {
+      background: var(--primary-light);
+      color: #ffffff;
+      border-color: var(--primary-light);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.5rem 0.85rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+    }
+
+    /* PUBLICATION LIST */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .pub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .pub-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: var(--shadow-md);
+    }
+
+    .pub-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .pub-badge-q1 {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    .pub-badge-q2 {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    .pub-badge-review {
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    .pub-year {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .pub-title {
+      font-family: var(--font-heading);
+      font-size: 1.12rem;
+      line-height: 1.45;
+      color: var(--primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .pub-title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .pub-title a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .pub-authors {
+      font-size: 0.92rem;
+      color: #475569;
+      margin-bottom: 0.45rem;
+      line-height: 1.5;
+    }
+
+    .pub-authors .author-self {
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .pub-journal {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.85rem;
+    }
+
+    .pub-journal strong {
+      font-style: normal;
+      color: var(--text-main);
+    }
+
+    .pub-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .pub-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      padding: 0.35rem 0.7rem;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .pub-link-btn:hover {
+      background: var(--primary-light);
+      color: #ffffff;
+      border-color: var(--primary-light);
+    }
+
+    /* BIBTEX MODAL / SNIPPET */
+    .bibtex-snippet {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      border-radius: 6px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      border: 1px solid #334155;
+    }
+
+    /* GRANTS & AWARDS SECTION */
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      color: var(--primary);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid var(--bg-subtle);
+      padding-bottom: 0.75rem;
+    }
+
+    .grant-item, .award-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .grant-item:last-child, .award-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .item-title {
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.4;
+    }
+
+    .item-subtitle {
+      font-size: 0.88rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .item-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* TEACHING & MENTORING */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .mentoring-box {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      margin-bottom: 0.85rem;
+    }
+
+    .mentoring-box strong {
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .mentoring-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 3.5rem 1.5rem 2.5rem;
+      margin-top: 4rem;
+      border-top: 1px solid #1e293b;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-heading);
+      color: #ffffff;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #94a3b8;
+    }
+
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* TOAST ALERT */
+    #copy-toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 9999;
+      border: 1px solid #334155;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+      .hero-affiliations {
+        align-items: center;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .nav-links {
+        display: none; /* Can be toggled with hamburger in mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        Dr. Subrat K. Behera <span>Research</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#grants">Grants & Awards</a></li>
+        <li><a href="#teaching">Teaching & Mentoring</a></li>
+        <li><a href="#contact" class="nav-btn">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-avatar-box">
+        <div class="hero-avatar">
+          👨‍🔬
+        </div>
+        <div class="hero-badge">Postdoctoral Fellow</div>
+      </div>
+      <div class="hero-content">
+        <h1>Dr. Subrat Kumar Behera</h1>
+        <div class="hero-subtitle">Postdoctoral Fellow | Department of Mechanical Engineering</div>
+        
+        <div class="hero-affiliations">
+          <span>🏛️ <strong>Indian Institute of Technology Bombay</strong> (03/2025 – Present)</span>
+          <span>🇺🇸 <em>Former Postdoctoral Researcher</em>, <strong>University of Louisville, USA</strong> (2023 – 2024)</span>
+          <span>🎓 <strong>Ph.D. in Mechanical Engineering</strong>, <strong>IIT Patna</strong> (Awarded via Express-Mode Evaluation)</span>
+        </div>
+
+        <p class="hero-bio">
+          My research bridges <strong>finite-strain continuum mechanics</strong>, <strong>multiphysics coupling</strong>, and <strong>nonlinear dynamics</strong> of smart soft materials. I develop micromechanics-based constitutive frameworks and <em>physics-informed neural networks (PINNs)</em> for field-responsive polymers, multiferroic soft solids, magnetorheological fluids, and 3D-printed architected metamaterials for energy absorption and battery abuse protection.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#publications" class="btn btn-primary">📚 View Publications (13 Journal Papers)</a>
+          <a href="https://scholar.google.com/citations?user=_jTw1D4AAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-secondary">🎓 Google Scholar</a>
+          <a href="https://github.com/subratkumarbehera009-rgb" target="_blank" rel="noopener" class="btn btn-secondary">💻 GitHub</a>
+          <a href="mailto:subratkumarbehera009@gmail.com" class="btn btn-secondary">✉️ Email Dr. Behera</a>
+          <a href="tel:+917381768009" class="btn btn-secondary">📞 +91-7381768009</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip">
+    <div class="stats-container">
+      <div class="stat-item">
+        <h3>13</h3>
+        <p>Peer-Reviewed Journals</p>
+      </div>
+      <div class="stat-item">
+        <h3>147+</h3>
+        <p>Citations (h-index: 8)</p>
+      </div>
+      <div class="stat-item">
+        <h3>7</h3>
+        <p>Under Review / In Prep</p>
+      </div>
+      <div class="stat-item">
+        <h3>$600k+</h3>
+        <p>Grants Contributed</p>
+      </div>
+      <div class="stat-item">
+        <h3>1st</h3>
+        <p>IIT Patna Express Ph.D.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH THEMES -->
+  <section class="container" id="research">
+    <div class="section-header">
+      <h2>Research Pillars & Thrusts</h2>
+      <p>Integrating fundamental physics, continuum mechanics, and machine learning to engineer smart materials and structural systems.</p>
+    </div>
+
+    <div class="research-grid">
+      <!-- Theme 1 -->
+      <div class="research-card">
+        <div class="research-icon">🧲</div>
+        <h3>Multiphysics of Soft Active & Multiferroic Solids</h3>
+        <p>
+          Investigating coupled magneto-electro-mechanical loading, finite viscoelasticity, active deformation, and growth in multiferroic elastomers. Formulating micromechanics-based finite-deformation theories and stability criteria under complex physical stimuli.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Electro-Magneto-Elasticity</span>
+          <span class="tag">Active Growth</span>
+          <span class="tag">Multiferroics</span>
+          <span class="tag">Composites Sci & Tech</span>
+        </div>
+      </div>
+
+      <!-- Theme 2 -->
+      <div class="research-card">
+        <div class="research-icon">⚙️</div>
+        <h3>Theoretical & Nonlinear Continuum Mechanics</h3>
+        <p>
+          Developing finite-strain kinematics, objective rate formulations, damage-induced stress softening (Mullins effect), and universal rate-dependent constitutive laws for polymeric and particle-reinforced composites.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Finite Viscoelasticity</span>
+          <span class="tag">Hyperelasticity</span>
+          <span class="tag">Damage Mechanics</span>
+          <span class="tag">IJSS & EJMAS</span>
+        </div>
+      </div>
+
+      <!-- Theme 3 -->
+      <div class="research-card">
+        <div class="research-icon">📈</div>
+        <h3>Nonlinear Dynamics, Bifurcation & Chaos Control</h3>
+        <p>
+          Analyzing periodic forcing, bistability, and chaotic oscillations in dielectric elastomer energy generators (DEGs), artificial muscles, and biomimetic circular membranes, with targeted control techniques for vibration mitigation and energy harvesting.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Dielectric Elastomers</span>
+          <span class="tag">Chaos Control</span>
+          <span class="tag">Bifurcation</span>
+          <span class="tag">JSV & CNSNS</span>
+        </div>
+      </div>
+
+      <!-- Theme 4 -->
+      <div class="research-card">
+        <div class="research-icon">🧠</div>
+        <h3>Physics-Informed Neural Networks (PINNs)</h3>
+        <p>
+          Designing thermodynamically consistent machine learning frameworks that strictly obey the laws of continuum mechanics (second law of thermodynamics, frame indifference) to learn complex constitutive responses of active soft polymers from sparse experimental data.
+        </p>
+        <div class="research-tags">
+          <span class="tag">PINNs</span>
+          <span class="tag">Data-Driven Mechanics</span>
+          <span class="tag">Thermodynamic Consistency</span>
+          <span class="tag">VHB 4905</span>
+        </div>
+      </div>
+
+      <!-- Theme 5 -->
+      <div class="research-card">
+        <div class="research-icon">🔋</div>
+        <h3>Architected Metamaterials & Battery Protection</h3>
+        <p>
+          Pioneering rate-dependent, large-deformation constitutive models for 3D-printable architected metamaterials and polymeric battery separators under dynamic crash/mechanical-abuse conditions to prevent thermal runaway in next-generation electric vehicles.
+        </p>
+        <div class="research-tags">
+          <span class="tag">Battery Separators</span>
+          <span class="tag">3D Printing</span>
+          <span class="tag">NSF CAREER</span>
+          <span class="tag">NSF I-Corps 2024</span>
+        </div>
+      </div>
+
+      <!-- Theme 6 -->
+      <div class="research-card">
+        <div class="research-icon">💧</div>
+        <h3>Smart Rheology & Magnetorheological Fluids</h3>
+        <p>
+          Developing unified continuum models capturing pre-yield viscoelasticity, post-yield flow, and sign-reversal phenomena in magnetorheological (MR) fluids for smart brake and damper applications.
+        </p>
+        <div class="research-tags">
+          <span class="tag">MR Fluids</span>
+          <span class="tag">Physics of Fluids</span>
+          <span class="tag">Smart Brakes</span>
+          <span class="tag">Mechanics Res Comm</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS SECTION -->
+  <section class="container" id="publications" style="padding-top: 1rem;">
+    <div class="section-header">
+      <h2>Refereed Journal Publications</h2>
+      <p>13 published peer-reviewed journal papers (all Q1/Q2 indexed), 4 manuscripts under review, and 3 in preparation. (* indicates corresponding author)</p>
+    </div>
+
+    <!-- Filter & Search Controls -->
+    <div class="pub-controls">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterPublications('all', this)">All (13)</button>
+        <button class="filter-btn" onclick="filterPublications('q1', this)">Top Q1 Papers</button>
+        <button class="filter-btn" onclick="filterPublications('continuum', this)">Continuum & Smart Solids</button>
+        <button class="filter-btn" onclick="filterPublications('dynamics', this)">Dynamics & Chaos</button>
+        <button class="filter-btn" onclick="filterPublications('fluids', this)">Rheology & Composites</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="pubSearch" class="search-input" placeholder="🔍 Search by keyword, title, author..." onkeyup="searchPublications()">
+      </div>
+    </div>
+
+    <!-- Publication Items -->
+    <div class="pub-list" id="pubList">
+
+      <!-- Paper 1 -->
+      <div class="pub-card" data-category="q1 continuum" data-keywords="micromechanics dielectric elastomers viscosity damage somnath sarangi prince kumar">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.6</span>
+          <span class="pub-year">2026</span>
+          <span class="pub-badge-q2">Elsevier</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.ijsolstr.2026.114296" target="_blank" rel="noopener">
+            A micromechanics-based constitutive model for dielectric elastomers with nonlinear viscosity and damage
+          </a>
+        </h3>
+        <div class="pub-authors">Prince Kumar*, <span class="author-self">Subrat Kumar Behera</span>, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>International Journal of Solids and Structures</strong>, Vol. 341, Art. 114296 (2026).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.ijsolstr.2026.114296" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib1')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib1')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib1">@article{kumar2026micromechanics,
+  title={A micromechanics-based constitutive model for dielectric elastomers with nonlinear viscosity and damage},
+  author={Kumar, Prince and Behera, Subrat Kumar and Sarangi, Somnath},
+  journal={International Journal of Solids and Structures},
+  volume={341},
+  pages={114296},
+  year={2026},
+  publisher={Elsevier},
+  doi={10.1016/j.ijsolstr.2026.114296}
+}</div>
+      </div>
+
+      <!-- Paper 2 -->
+      <div class="pub-card" data-category="q1 fluids" data-keywords="unified physics-based continuum theory mr fluid deformation brake applications aip somnath sarangi ranjan bhattacharyya">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.3</span>
+          <span class="pub-year">2025</span>
+          <span class="pub-badge-q2">AIP Publishing</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1063/5.0248093" target="_blank" rel="noopener">
+            A unified physics-based continuum theory for MR fluid deformation: Implications in MR-based brake applications
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Ranjan Bhattacharyya, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>Physics of Fluids</strong>, Vol. 37, No. 2, Art. 023103 (2025).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1063/5.0248093" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib2')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib2')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib2">@article{behera2025unified,
+  title={A unified physics-based continuum theory for MR fluid deformation: Implications in MR-based brake applications},
+  author={Behera, Subrat Kumar and Bhattacharyya, Ranjan and Sarangi, Somnath},
+  journal={Physics of Fluids},
+  volume={37},
+  number={2},
+  pages={023103},
+  year={2025},
+  publisher={AIP Publishing},
+  doi={10.1063/5.0248093}
+}</div>
+      </div>
+
+      <!-- Paper 3 -->
+      <div class="pub-card" data-category="q1 dynamics" data-keywords="chaos control dissipative dielectric elastomeric membrane periodic loads journal of sound and vibration rashi aditi ranjan">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.9</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.jsv.2024.118328" target="_blank" rel="noopener">
+            Emergence of chaos and its control in a dissipative dielectric elastomeric membrane system under periodic loads
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Rashi Aditi Ranjan, Somnath Sarangi, Arun Kumar Samantaray, and Ranjan Bhattacharyya</div>
+        <div class="pub-journal"><strong>Journal of Sound and Vibration</strong>, Vol. 577, Art. 118328 (2024).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.jsv.2024.118328" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib3')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib3')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib3">@article{behera2024emergence,
+  title={Emergence of chaos and its control in a dissipative dielectric elastomeric membrane system under periodic loads},
+  author={Behera, Subrat Kumar and Ranjan, Rashi Aditi and Sarangi, Somnath and Samantaray, Arun Kumar and Bhattacharyya, Ranjan},
+  journal={Journal of Sound and Vibration},
+  volume={577},
+  pages={118328},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.jsv.2024.118328}
+}</div>
+      </div>
+
+      <!-- Paper 4 -->
+      <div class="pub-card" data-category="q1 dynamics" data-keywords="circular dielectric energy generator nonlinear dynamics chaos control communications in nonlinear science cnsns">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 3.8</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.cnsns.2023.107608" target="_blank" rel="noopener">
+            Nonlinear dynamics and chaos control of circular dielectric energy generator
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Rashi Aditi Ranjan, Somnath Sarangi, Arun Kumar Samantaray, and Ranjan Bhattacharyya</div>
+        <div class="pub-journal"><strong>Communications in Nonlinear Science and Numerical Simulation</strong>, Vol. 128, Art. 107608 (2024).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.cnsns.2023.107608" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib4')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib4')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib4">@article{behera2024nonlinear,
+  title={Nonlinear dynamics and chaos control of circular dielectric energy generator},
+  author={Behera, Subrat Kumar and Ranjan, Rashi Aditi and Sarangi, Somnath and Samantaray, Arun Kumar and Bhattacharyya, Ranjan},
+  journal={Communications in Nonlinear Science and Numerical Simulation},
+  volume={128},
+  pages={107608},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.cnsns.2023.107608}
+}</div>
+      </div>
+
+      <!-- Paper 5 -->
+      <div class="pub-card" data-category="fluids" data-keywords="electro-magneto-rheological fluids before yielding mechanics research communications somnath sarangi">
+        <div class="pub-meta">
+          <span class="pub-badge-q2">Q2 – IF 2.3</span>
+          <span class="pub-year">2024</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.mechrescom.2024.104253" target="_blank" rel="noopener">
+            Constitutive modeling of electro-magneto-rheological fluids before yielding
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span> and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>Mechanics Research Communications</strong>, Vol. 136, Art. 104253 (2024).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.mechrescom.2024.104253" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib5')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib5')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib5">@article{behera2024constitutive,
+  title={Constitutive modeling of electro-magneto-rheological fluids before yielding},
+  author={Behera, Subrat Kumar and Sarangi, Somnath},
+  journal={Mechanics Research Communications},
+  volume={136},
+  pages={104253},
+  year={2024},
+  publisher={Elsevier},
+  doi={10.1016/j.mechrescom.2024.104253}
+}</div>
+      </div>
+
+      <!-- Paper 6 -->
+      <div class="pub-card" data-category="q1 continuum fluids" data-keywords="universal rate-dependence electro-magneto-active polymeric composites composites science and technology deepak kumar chandra shekhar maurya">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 9.8</span>
+          <span class="pub-year">2023</span>
+          <span class="pub-badge-q2">High Impact</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.compscitech.2023.110015" target="_blank" rel="noopener">
+            Universal rate-dependence in electro-magneto-active polymeric composites
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Deepak Kumar, Chandra Shekhar Maurya, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>Composites Science and Technology</strong>, Vol. 237, Art. 110015 (2023).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.compscitech.2023.110015" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib6')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib6')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib6">@article{behera2023universal,
+  title={Universal rate-dependence in electro-magneto-active polymeric composites},
+  author={Behera, Subrat Kumar and Kumar, Deepak and Maurya, Chandra Shekhar and Sarangi, Somnath},
+  journal={Composites Science and Technology},
+  volume={237},
+  pages={110015},
+  year={2023},
+  publisher={Elsevier},
+  doi={10.1016/j.compscitech.2023.110015}
+}</div>
+      </div>
+
+      <!-- Paper 7 -->
+      <div class="pub-card" data-category="q1 dynamics" data-keywords="dynamic modelling biological circular membrane international journal of engineering science ijes rashi aditi ranjan">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 5.7</span>
+          <span class="pub-year">2023</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.ijengsci.2023.103864" target="_blank" rel="noopener">
+            Dynamic modelling and analysis of a biological circular membrane
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Rashi Aditi Ranjan, Deepak Kumar, Somnath Sarangi, and Ranjan Bhattacharyya</div>
+        <div class="pub-journal"><strong>International Journal of Engineering Science</strong>, Vol. 188, Art. 103864 (2023).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.ijengsci.2023.103864" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib7')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib7')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib7">@article{behera2023dynamic,
+  title={Dynamic modelling and analysis of a biological circular membrane},
+  author={Behera, Subrat Kumar and Ranjan, Rashi Aditi and Kumar, Deepak and Sarangi, Somnath and Bhattacharyya, Ranjan},
+  journal={International Journal of Engineering Science},
+  volume={188},
+  pages={103864},
+  year={2023},
+  publisher={Elsevier},
+  doi={10.1016/j.ijengsci.2023.103864}
+}</div>
+      </div>
+
+      <!-- Paper 8 -->
+      <div class="pub-card" data-category="q1 dynamics" data-keywords="nonlinear dynamics artificial muscle elastomer-electrode inertia chaos solitons fractals">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 5.6</span>
+          <span class="pub-year">2023</span>
+          <span class="pub-badge-q2">Elsevier</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.chaos.2023.113820" target="_blank" rel="noopener">
+            Nonlinear dynamics of an artificial muscle with elastomer–electrode inertia: Modelling and analysis
+          </a>
+        </h3>
+        <div class="pub-authors">Rashi Aditi Ranjan*, <span class="author-self">Subrat Kumar Behera</span>, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>Chaos, Solitons & Fractals</strong>, Vol. 174, Art. 113820 (2023).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.chaos.2023.113820" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib8')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib8')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib8">@article{ranjan2023nonlinear,
+  title={Nonlinear dynamics of an artificial muscle with elastomer--electrode inertia: Modelling and analysis},
+  author={Ranjan, Rashi Aditi and Behera, Subrat Kumar and Sarangi, Somnath},
+  journal={Chaos, Solitons \& Fractals},
+  volume={174},
+  pages={113820},
+  year={2023},
+  publisher={Elsevier},
+  doi={10.1016/j.chaos.2023.113820}
+}</div>
+      </div>
+
+      <!-- Paper 9 -->
+      <div class="pub-card" data-category="q1 continuum" data-keywords="field dependent magneto-viscoelasticity particle reinforced elastomer european journal of mechanics a solids ejmas">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.2</span>
+          <span class="pub-year">2023</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.euromechsol.2023.104929" target="_blank" rel="noopener">
+            Field dependent magneto-viscoelasticity in particle reinforced elastomer
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Rashi Aditi Ranjan, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>European Journal of Mechanics - A/Solids</strong>, Vol. 99, Art. 104929 (2023).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.euromechsol.2023.104929" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib9')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib9')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib9">@article{behera2023field,
+  title={Field dependent magneto-viscoelasticity in particle reinforced elastomer},
+  author={Behera, Subrat Kumar and Ranjan, Rashi Aditi and Sarangi, Somnath},
+  journal={European Journal of Mechanics-A/Solids},
+  volume={99},
+  pages={104929},
+  year={2023},
+  publisher={Elsevier},
+  doi={10.1016/j.euromechsol.2023.104929}
+}</div>
+      </div>
+
+      <!-- Paper 10 -->
+      <div class="pub-card" data-category="q1 continuum" data-keywords="damage-induced stress softening electro-magneto-viscoelastic materials mechanics of materials">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.1</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.mechmat.2022.104348" target="_blank" rel="noopener">
+            Constitutive modeling of damage-induced stress softening in electro-magneto-viscoelastic materials
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Deepak Kumar, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>Mechanics of Materials</strong>, Vol. 171, Art. 104348 (2022).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.mechmat.2022.104348" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib10')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib10')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib10">@article{behera2022constitutive,
+  title={Constitutive modeling of damage-induced stress softening in electro-magneto-viscoelastic materials},
+  author={Behera, Subrat Kumar and Kumar, Deepak and Sarangi, Somnath},
+  journal={Mechanics of Materials},
+  volume={171},
+  pages={104348},
+  year={2022},
+  publisher={Elsevier},
+  doi={10.1016/j.mechmat.2022.104348}
+}</div>
+      </div>
+
+      <!-- Paper 11 -->
+      <div class="pub-card" data-category="continuum" data-keywords="energy density function electro-elastic deformation dielectric cylindrical actuator mechanics of soft materials springer">
+        <div class="pub-meta">
+          <span class="pub-badge-q2">Peer Reviewed</span>
+          <span class="pub-year">2022</span>
+          <span class="pub-badge-q2">Springer</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1007/s42558-022-00042-5" target="_blank" rel="noopener">
+            An alternative form of energy density function demonstrating the electro-elastic deformation of a dielectric cylindrical actuator
+          </a>
+        </h3>
+        <div class="pub-authors">Deepak Kumar, <span class="author-self">Subrat Kumar Behera</span>, Kriti Arya, and Somnath Sarangi*</div>
+        <div class="pub-journal"><strong>Mechanics of Soft Materials</strong>, Vol. 4, Art. 3 (2022).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1007/s42558-022-00042-5" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib11')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib11')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib11">@article{kumar2022alternative,
+  title={An alternative form of energy density function demonstrating the electro-elastic deformation of a dielectric cylindrical actuator},
+  author={Kumar, Deepak and Behera, Subrat Kumar and Arya, Kriti and Sarangi, Somnath},
+  journal={Mechanics of Soft Materials},
+  volume={4},
+  pages={3},
+  year={2022},
+  publisher={Springer},
+  doi={10.1007/s42558-022-00042-5}
+}</div>
+      </div>
+
+      <!-- Paper 12 -->
+      <div class="pub-card" data-category="q1 continuum" data-keywords="electro-viscoelastic dielectric elastomer continuum mechanics approach european journal of mechanics a solids ejmas">
+        <div class="pub-meta">
+          <span class="pub-badge-q1">Q1 – IF 4.2</span>
+          <span class="pub-year">2021</span>
+          <span class="pub-badge-q2">Elsevier</span>
+          <span class="pub-badge-review">Corresponding Author</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.1016/j.euromechsol.2021.104369" target="_blank" rel="noopener">
+            Modeling of electro-viscoelastic dielectric elastomer: A continuum mechanics approach
+          </a>
+        </h3>
+        <div class="pub-authors"><span class="author-self">Subrat Kumar Behera*</span>, Deepak Kumar, and Somnath Sarangi</div>
+        <div class="pub-journal"><strong>European Journal of Mechanics - A/Solids</strong>, Vol. 90, Art. 104369 (2021).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.euromechsol.2021.104369" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib12')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib12')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib12">@article{behera2021modeling,
+  title={Modeling of electro-viscoelastic dielectric elastomer: A continuum mechanics approach},
+  author={Behera, Subrat Kumar and Kumar, Deepak and Sarangi, Somnath},
+  journal={European Journal of Mechanics-A/Solids},
+  volume={90},
+  pages={104369},
+  year={2021},
+  publisher={Elsevier},
+  doi={10.1016/j.euromechsol.2021.104369}
+}</div>
+      </div>
+
+      <!-- Paper 13 -->
+      <div class="pub-card" data-category="fluids" data-keywords="free vibration analysis un-damped woven roving laminated composite plate materials science forum vssut">
+        <div class="pub-meta">
+          <span class="pub-badge-q2">Scopus Indexed</span>
+          <span class="pub-year">2020</span>
+          <span class="pub-badge-q2">Trans Tech</span>
+        </div>
+        <h3 class="pub-title">
+          <a href="https://doi.org/10.4028/www.scientific.net/MSF.978.264" target="_blank" rel="noopener">
+            Free vibration analysis and investigation of mechanical properties of un-damped woven roving laminated composite plate using different boundary conditions
+          </a>
+        </h3>
+        <div class="pub-authors">Mihir Kumar Sutar*, <span class="author-self">Subrat Kumar Behera</span>, and Sarojrani Pattnaik</div>
+        <div class="pub-journal"><strong>Materials Science Forum</strong>, Vol. 978, pp. 264–270 (2020).</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.4028/www.scientific.net/MSF.978.264" target="_blank" rel="noopener" class="pub-link-btn">🔗 DOI / Full Text</a>
+          <button class="pub-link-btn" onclick="toggleBibtex('bib13')">📋 BibTeX</button>
+          <button class="pub-link-btn" onclick="copyBibtex('bib13')">📑 Copy Citation</button>
+        </div>
+        <div class="bibtex-snippet" id="bib13">@article{sutar2020free,
+  title={Free vibration analysis and investigation of mechanical properties of un-damped woven roving laminated composite plate using different boundary conditions},
+  author={Sutar, Mihir Kumar and Behera, Subrat Kumar and Pattnaik, Sarojrani},
+  journal={Materials Science Forum},
+  volume={978},
+  pages={264--270},
+  year={2020},
+  publisher={Trans Tech Publ},
+  doi={10.4028/www.scientific.net/MSF.978.264}
+}</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MANUSCRIPTS UNDER REVIEW & IN PREP -->
+  <section class="container" style="padding-top: 0;">
+    <div class="section-header">
+      <h2>Manuscripts Under Review & In Preparation</h2>
+      <p>Cutting-edge forthcoming work on anisotropic electro-magneto-viscoelasticity, active muscle memory, and PINNs. (Drafts available upon request)</p>
+    </div>
+
+    <div class="grid-2col">
+      <!-- Under Review -->
+      <div class="info-card">
+        <h3>📝 Under Review (4 Papers)</h3>
+
+        <div class="grant-item">
+          <div class="item-title">A micromechanics-based finite-deformation theory for intrinsically anisotropic electro-magneto-viscoelastic soft solids</div>
+          <div class="item-subtitle">Journal of the Mechanics and Physics of Solids (JMPS) • Under Review (2026)</div>
+          <div class="item-desc"><span class="author-self">Subrat Kumar Behera</span> and Amit Singh.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Field-selective dissipation in electro-magneto-viscoelastic solids of differential type: Representation, controllable motions and a global strong-ellipticity theorem</div>
+          <div class="item-subtitle">International Journal of Engineering Science • Revision Submitted (2026)</div>
+          <div class="item-desc"><span class="author-self">Subrat Kumar Behera*</span>.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Sign reversal of the magnetorheological effect from competing micromechanisms</div>
+          <div class="item-subtitle">International Journal of Engineering Science • Revision Submitted (2026)</div>
+          <div class="item-desc"><span class="author-self">Subrat Kumar Behera*</span>.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Nonlinear oscillations of biomimetic hyperelastic tubes under varying age and pressure conditions</div>
+          <div class="item-subtitle">Mechanics of Materials • Revision Submitted (2026)</div>
+          <div class="item-desc">Tarun Kumar, Kriti Arya, <span class="author-self">Subrat Kumar Behera*</span>, and Somnath Sarangi.</div>
+        </div>
+      </div>
+
+      <!-- In Preparation -->
+      <div class="info-card">
+        <h3>🔬 In Preparation (3 Papers)</h3>
+
+        <div class="grant-item">
+          <div class="item-title">Coupled viscoelastic-swelling behavior of fiber reinforced polymer under low to high strain rate deformation</div>
+          <div class="item-subtitle">Target: Journal of the Mechanics and Physics of Solids (JMPS) (2026)</div>
+          <div class="item-desc"><span class="author-self">Subrat Kumar Behera*</span> and Yanyu Chen (Univ of Louisville).</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Bio-mimetic modelling of muscle memory through soft magneto-rheological elastomer</div>
+          <div class="item-subtitle">Target: Journal of the Mechanics and Physics of Solids (JMPS) (2026)</div>
+          <div class="item-desc"><span class="author-self">Subrat Kumar Behera</span> and Amit Singh (IIT Bombay).</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Thermodynamically Consistent Physics-Informed Neural Network for Thermo-Electro-Viscoelastic Modeling of VHB 4905</div>
+          <div class="item-subtitle">Target: Mechanics of Materials (2026)</div>
+          <div class="item-desc">Ashwani Kushwaha and <span class="author-self">Subrat Kumar Behera*</span>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRANTS, HONORS & PATENTS -->
+  <section class="container" id="grants" style="padding-top: 0;">
+    <div class="section-header">
+      <h2>Grants, Honors & Inventions</h2>
+      <p>Demonstrated track record of external competitive funding, patent filings, and prestigious academic awards.</p>
+    </div>
+
+    <div class="grid-2col">
+      <!-- Grants -->
+      <div class="info-card">
+        <h3>💰 Grants & Proposal Writing</h3>
+
+        <div class="grant-item">
+          <div class="item-title">CAREER: Bioinspired Adaptive Architected Materials for Battery Mechanical Protection and Thermal Management: Theory, Simulations, and Experiments</div>
+          <div class="item-subtitle">National Science Foundation (NSF, USA) • $600,338 • Submitted</div>
+          <div class="item-desc"><strong>Contribution:</strong> Authored the constitutive material modeling section and contributed key mechanics review.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Micromechanics-Based Model of Electro-Magneto-Active Materials</div>
+          <div class="item-subtitle">Core Research Grant (CRG), DST, Govt. of India • Granted</div>
+          <div class="item-desc"><strong>Contribution:</strong> Contributed extensive literature framework and co-authored proposal draft.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">NSF I-Corps Award ($3,000)</div>
+          <div class="item-subtitle">National Science Foundation (USA) • 2024</div>
+          <div class="item-desc">Awarded for commercial translational research on architected metamaterials and battery safety.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">💡 Patent: Statically Determinate Smart Shear Mounting with Integrated Control</div>
+          <div class="item-subtitle">Patent Application Filed</div>
+          <div class="item-desc">Novel smart vibration isolation and adaptive damping mechanism.</div>
+        </div>
+      </div>
+
+      <!-- Honors -->
+      <div class="info-card">
+        <h3>🏆 Honors & Major Awards</h3>
+
+        <div class="award-item">
+          <div class="item-title">First Ph.D. via Express-Mode Thesis Evaluation</div>
+          <div class="item-subtitle">Indian Institute of Technology Patna • 2023</div>
+          <div class="item-desc">Recognized as the first scholar in the history of IIT Patna to receive the doctoral degree through express-mode thesis evaluation for exceptional research output.</div>
+        </div>
+
+        <div class="award-item">
+          <div class="item-title">Best Paper Award</div>
+          <div class="item-subtitle">IPRoMM 2022 • IIT (ISM) Dhanbad</div>
+          <div class="item-desc">Awarded for breakthrough contributions in dynamics and machine mechanisms.</div>
+        </div>
+
+        <div class="award-item">
+          <div class="item-title">Doctoral JRF / SRF Fellowship</div>
+          <div class="item-subtitle">Ministry of Education, Govt. of India • 2019 – 2023</div>
+          <div class="item-desc">Fully funded competitive national fellowship with contingency and conference travel grant.</div>
+        </div>
+
+        <div class="award-item">
+          <div class="item-title">Postgraduate National Scholarship</div>
+          <div class="item-subtitle">Ministry of Education, Govt. of India (M.Tech.) • 2016 – 2018</div>
+          <div class="item-desc">Awarded during M.Tech. studies in Machine Design & Analysis.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING & MENTORING -->
+  <section class="container" id="teaching" style="padding-top: 0;">
+    <div class="section-header">
+      <h2>Teaching & Student Mentoring</h2>
+      <p>Committed to pedagogical excellence in continuum mechanics, FEM, and nurturing the next generation of engineers.</p>
+    </div>
+
+    <div class="teaching-grid">
+      <div class="info-card">
+        <h3>👨‍🏫 Teaching Experience</h3>
+        
+        <div class="grant-item">
+          <div class="item-title">Guest Lecturer: Cellular Solids (ME-675-01)</div>
+          <div class="item-subtitle">University of Louisville, USA • Spring 2024</div>
+          <div class="item-desc">Delivered specialized graduate lectures on <em>Modeling of hyperelastic materials and finite viscoelasticity</em>.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">ME 613: Finite Element Method</div>
+          <div class="item-subtitle">IIT Bombay • Autumn 2026</div>
+          <div class="item-desc">Teaching Assistant responsible for tutorials, FEM computer assignments, and student doubt clearing.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">MS 101: Makerspace Laboratory</div>
+          <div class="item-subtitle">IIT Bombay • Spring 2026</div>
+          <div class="item-desc">Hands-on instruction in 3D printing, advanced digital fabrication, and prototyping.</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">ME-102 Engineering Mechanics & ME-207 Dynamics</div>
+          <div class="item-subtitle">IIT Patna • 2021 – 2022</div>
+          <div class="item-desc">Led recitations, workshops (Foundry, CNC Centre), and laboratory grading.</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>👥 Mentorship & Student Guidance</h3>
+
+        <div class="mentoring-box">
+          <strong>Prince Kumar</strong> (Ph.D. Student, IIT Patna, 08/2023 – Present)
+          <p>Topic: <em>Constitutive modeling of shape memory polymers and dielectric elastomers</em></p>
+          <p style="color: #059669; font-weight: 600; margin-top: 0.2rem;">Outcome: Published Q1 paper in IJSS (2026)</p>
+        </div>
+
+        <div class="mentoring-box">
+          <strong>Tarun Kumar</strong> (M.Tech. Student, IIT Patna, 08/2025 – 07/2026)
+          <p>Topic: <em>Nonlinear dynamics of cylindrical hyperelastic tube</em></p>
+          <p style="color: #059669; font-weight: 600; margin-top: 0.2rem;">Outcome: Paper under revision in Mechanics of Materials (2026)</p>
+        </div>
+
+        <div class="mentoring-box">
+          <strong>Vikalp Sharma</strong> (M.Tech. Student, IIT Patna, 08/2026 – Present)
+          <p>Topic: <em>Biomimetic modeling of human arterial system</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL SERVICE & REFERENCES -->
+  <section class="container" id="contact" style="padding-top: 0;">
+    <div class="section-header">
+      <h2>Professional Service & Academic References</h2>
+      <p>Active peer reviewer for leading mechanics journals and esteemed faculty references.</p>
+    </div>
+
+    <div class="grid-2col">
+      <!-- Peer Review -->
+      <div class="info-card">
+        <h3>📖 Journal Reviewer Service</h3>
+        <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          Regularly invited peer-reviewer for prestigious mechanics, physics, and multidisciplinary journals:
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tag">International Journal of Engineering Science</span>
+          <span class="tag">Nonlinear Dynamics</span>
+          <span class="tag">Physics of Fluids</span>
+          <span class="tag">Chaos, Solitons & Fractals</span>
+          <span class="tag">Engineering Structures</span>
+          <span class="tag">Archive of Applied Mechanics</span>
+          <span class="tag">Control Engineering Practice</span>
+          <span class="tag">Scientific Reports</span>
+          <span class="tag">Physics Letters A</span>
+          <span class="tag">AIP Advances</span>
+          <span class="tag">Review of Scientific Instruments</span>
+          <span class="tag">PLOS ONE</span>
+        </div>
+      </div>
+
+      <!-- References -->
+      <div class="info-card">
+        <h3>🏛️ Academic References</h3>
+        
+        <div class="grant-item">
+          <div class="item-title">Prof. Somnath Sarangi (Ph.D. Advisor)</div>
+          <div class="item-subtitle">Associate Professor, Department of Mechanical Engineering, IIT Patna</div>
+          <div class="item-desc">Email: somsara@iitp.ac.in | Tel: +91-9470836481</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Prof. Amit Singh (Postdoctoral Host)</div>
+          <div class="item-subtitle">Associate Professor, Department of Mechanical Engineering, IIT Bombay</div>
+          <div class="item-desc">Email: amit.k.singh@iitb.ac.in | Tel: +91-9820669363</div>
+        </div>
+
+        <div class="grant-item">
+          <div class="item-title">Prof. Ranjan Bhattacharyya (Collaborator)</div>
+          <div class="item-subtitle">Professor, Systems, Dynamics & Control Lab, Dept. of Mechanical Engineering, IIT Kharagpur</div>
+          <div class="item-desc">Email: rbmail@mech.iitkgp.ac.in | Tel: +91-3222-282902</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Dr. Subrat Kumar Behera</h4>
+        <p>
+          Postdoctoral Fellow in Mechanical Engineering at the Indian Institute of Technology Bombay. Specializing in nonlinear continuum mechanics, smart soft matter, PINNs, and architected materials.
+        </p>
+        <p style="margin-top: 1rem; color: #cbd5e1;">
+          📍 IIT Bombay, Powai, Mumbai 400076, India<br>
+          ✉️ subratkumarbehera009@gmail.com | 📞 +91-7381768009
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#about">About & Bio</a></li>
+          <li><a href="#research">Research Thrusts</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#grants">Grants & Funding</a></li>
+          <li><a href="#teaching">Teaching & Mentoring</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>External Profiles</h5>
+        <ul>
+          <li><a href="https://scholar.google.com/citations?user=_jTw1D4AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar Profile</a></li>
+          <li><a href="https://www.researchgate.net/profile/Subrat-Kumar-Behera-2" target="_blank" rel="noopener">ResearchGate Profile</a></li>
+          <li><a href="https://github.com/subratkumarbehera009-rgb" target="_blank" rel="noopener">GitHub Profile (@subratkumarbehera009-rgb)</a></li>
+          <li><a href="https://subratkumarbehera009-rgb.github.io" target="_blank" rel="noopener">Official Academic Site</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Dr. Subrat Kumar Behera. Built for faculty search committees and academic peers.
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="copy-toast">📋 BibTeX citation copied to clipboard!</div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // FILTER PUBLICATIONS
+    function filterPublications(category, btnElement) {
+      // Set active button
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      const cards = document.querySelectorAll('.pub-card');
+      cards.forEach(card => {
+        if (category === 'all') {
+          card.style.display = 'block';
+        } else {
+          const cardCategories = card.getAttribute('data-category') || '';
+          if (cardCategories.includes(category)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // SEARCH PUBLICATIONS
+    function searchPublications() {
+      const query = document.getElementById('pubSearch').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.pub-card');
+
+      cards.forEach(card => {
+        const text = (card.innerText + ' ' + (card.getAttribute('data-keywords') || '')).toLowerCase();
+        if (query === '' || text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // TOGGLE BIBTEX
+    function toggleBibtex(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    }
+
+    // COPY BIBTEX
+    function copyBibtex(id) {
+      const el = document.getElementById(id);
+      const text = el.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.style.display = 'flex';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 2500);
+      }).catch(err => {
+        alert('Copied citation to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>
